@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "id": "VSoft.JsonDataObjects",
+    "version": "0.1.0",
+    "description": "Json Parser for D2009 or later",
+    "authors": "Andreas Hausladen",
+    "projectUrl": "https://github.com/VSoftTechnologies/JsonDataObjects",
+    "license": "MIT",
+    "copyright": "Andreas Hausladen and contributors",
+    "tags": "json parser"
+  },
+  "targetPlatforms": [
+    {
+      "compiler": "XE2",
+      "platforms": "Win32, Win64",
+      "template": "default"
+    },
+    {
+      "compiler": "XE3",
+      "platforms": "Win32, Win64",
+      "template": "default"
+    },
+    {
+      "compiler": "XE4",
+      "platforms": "Win32, Win64",
+      "template": "default"
+    },
+    {
+      "compiler": "XE5",
+      "platforms": "Win32, Win64",
+      "template": "default"
+    },
+    {
+      "compiler": "XE6",
+      "platforms": "Win32, Win64",
+      "template": "default"
+    },
+    {
+      "compiler": "XE7",
+      "platforms": "Win32, Win64",
+      "template": "default"
+    },
+    {
+      "compiler": "XE8",
+      "platforms": "Win32, Win64",
+      "template": "default"
+    },
+    {
+      "compiler": "10.0",
+      "platforms": "Win32, Win64",
+      "template": "default"
+    },
+    {
+      "compiler": "10.1",
+      "platforms": "Win32, Win64",
+      "template": "default"
+    },
+    {
+      "compiler": "10.2",
+      "platforms": "Win32, Win64",
+      "template": "default"
+    },
+    {
+      "compiler": "10.3",
+      "platforms": "Win32, Win64",
+      "template": "default"
+    },
+    {
+      "compiler": "10.4",
+      "platforms": "Win32, Win64",
+      "template": "default"
+    }    
+  ],
+  "templates": [
+    {
+      "name": "default",
+      "source": [
+        {
+          "src": "source\\JsonDataObjects.pas",
+          "dest": "source"
+        },
+        {
+          "src": "packages\\Rad Studio $compilerWithCodeName$\\*.dpk",
+          "dest": "packages\\Rad Studio $compilerWithCodeName$"
+        },
+        {
+          "src": "packages\\Rad Studio $compilerWithCodeName$\\*.dproj",
+          "dest": "packages\\Rad Studio $compilerWithCodeName$"
+        }
+      ],
+      "searchPaths": [
+        {
+          "path": "source"
+        }
+      ],
+      "build": [
+        {
+          "id": "Runtime",
+          "project": ".\\packages\\Rad Studio $compilerWithCodeName$\\VSoft.JsonDataObjectsR.dproj"
+        }
+      ]
+    }
+  ]
+}
