@@ -1,40 +1,44 @@
-Json Data Objects
-=================
+# Json Data Objects
 
 This Delphi unit contains a JSON parser that supports Delphi 2009-10Seattle and the platforms
 Win32, Win64 and ARM Android (MacOS and iOS may work).
 
-Clone with GIT
---------------
+NOTE : This is a fork of https://github.com/ahausladen/JsonDataObjects - the primary purpose of this fork is to add support for the DPM Package Manager.
+
+## Clone with GIT
+
 ```
-> git clone git@github.com:ahausladen/JsonDataObjects.git
+> git clone git@github.com:VSoftTechnologies/JsonDataObjects.git
 ```
+
 or
+
 ```
-> git clone https://github.com/ahausladen/JsonDataObjects.git
+> git clone https://github.com/VSoftTechnologies/JsonDataObjects.git
 ```
 
 This will get you the Json Data Objects repository.
 
-How to install
---------------
+## How to install
+
 1. Clone the JsonDataObjects repository
 2. Add the JsonDataObjects.pas unit to your project.
 
-Features
---------
-* Fast dual JSON parser for parsing UTF8 and UTF16 without conversion
-* Automatic creation of arrays and objects
-* Easy access mode with implicit operators
-* Compact and formatted output modes
-* Variants support
-* Null can be auto-typecasted to a value type if JsonSerializationConfig.NullConvertsToValueTypes is set to True
-* Progress callback support for loading large JSON strings
-* Win32, Win64 and ARM Android support (MacOS and iOS may work)
+## Features
 
-Usage
------
+- Fast dual JSON parser for parsing UTF8 and UTF16 without conversion
+- Automatic creation of arrays and objects
+- Easy access mode with implicit operators
+- Compact and formatted output modes
+- Variants support
+- Null can be auto-typecasted to a value type if JsonSerializationConfig.NullConvertsToValueTypes is set to True
+- Progress callback support for loading large JSON strings
+- Win32, Win64 and ARM Android support (MacOS and iOS may work)
+
+## Usage
+
 Simple example
+
 ```Delphi
 var
   Obj: TJsonObject;
@@ -52,6 +56,7 @@ end;
 ```
 
 Filling and serializing JSON objects
+
 ```Delphi
 var
   Obj, ChildObj: TJsonObject;
@@ -77,6 +82,7 @@ begin
     Obj.Free;
   end;
 ```
+
 ```JSON
 {
 	"foo": "bar",
@@ -96,6 +102,7 @@ begin
 ```
 
 Copying JSON objects with `Assign`
+
 ```Delphi
 var
   Obj, ClonedObj: TJsonObject;
@@ -115,6 +122,7 @@ begin
   end;
 end;
 ```
+
 ```JSON
 {
 	"foo": [
