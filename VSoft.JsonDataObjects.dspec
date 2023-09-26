@@ -1,10 +1,11 @@
 {
   "metadata": {
     "id": "VSoft.JsonDataObjects",
-    "version": "0.1.3",
+    "version": "0.2.0",
     "description": "Json Parser for D2009 or later",
     "authors": "Andreas Hausladen",
     "projectUrl": "https://github.com/VSoftTechnologies/JsonDataObjects",
+    "repositoryUrl": "https://github.com/VSoftTechnologies/JsonDataObjects",
     "license": "MIT",
     "copyright": "Andreas Hausladen and contributors",
     "tags": "json parser"
