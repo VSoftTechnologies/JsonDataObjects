@@ -37,6 +37,9 @@ unit JsonDataObjects;
 {$ELSE}
   {$IF CompilerVersion >= 24.0} // XE3 or newer
     {$LEGACYIFEND ON}
+    {$IF CompilerVersion >= 35.0} //11.0
+      {$DEFINE USE_NATIVEINT}
+    {$IFEND}
   {$IFEND}
   {$IF CompilerVersion >= 23.0}
     {$DEFINE HAS_UNIT_SCOPE}
@@ -1078,11 +1081,7 @@ type
   private
     FDataString: UTF8String;
   protected
-    {$IF CompilerVersion >= 35.0}
-    function Realloc(var NewCapacity: NativeInt): Pointer; override;
-    {$ELSE}
-    function Realloc(var NewCapacity: Longint): Pointer; override;
-    {$IFEND}
+    function Realloc(var NewCapacity: {$IF Defined(USE_NATIVEINT)}NativeInt{$ELSE}Longint{$IFEND}): Pointer; override;
   public
     constructor Create;
     property DataString: UTF8String read FDataString;
@@ -1093,11 +1092,7 @@ type
   private
     FBytes: TBytes;
   protected
-    {$IF CompilerVersion >= 35.0}
-    function Realloc(var NewCapacity: NativeInt): Pointer; override;
-    {$ELSE}
-    function Realloc(var NewCapacity: Longint): Pointer; override;
-    {$IFEND}
+    function Realloc(var NewCapacity: {$IF Defined(USE_NATIVEINT)}NativeInt{$ELSE}Longint{$IFEND}): Pointer; override;
   public
     constructor Create;
     property Bytes: TBytes read FBytes;
@@ -8241,13 +8236,9 @@ begin
   SetPointer(nil, 0);
 end;
 
-{$IF CompilerVersion >= 35.0}
-function TJsonUTF8StringStream.Realloc(var NewCapacity: NativeInt): Pointer;
-{$ELSE}
-function TJsonUTF8StringStream.Realloc(var NewCapacity: Longint): Pointer;
-{$IFEND}
+function TJsonUTF8StringStream.Realloc(var NewCapacity: {$IF Defined(USE_NATIVEINT)}NativeInt{$ELSE}Longint{$IFEND}): Pointer;
 var
-  L: Longint;
+  L: {$IF Defined(USE_NATIVEINT)}NativeInt{$ELSE}Longint{$IFEND};
 begin
   if NewCapacity <> Capacity then
   begin
@@ -8283,13 +8274,9 @@ begin
   SetPointer(nil, 0);
 end;
 
-{$IF CompilerVersion >= 35.0}
-function TJsonBytesStream.Realloc(var NewCapacity: NativeInt): Pointer;
-{$ELSE}
-function TJsonBytesStream.Realloc(var NewCapacity: Longint): Pointer;
-{$IFEND}
+function TJsonBytesStream.Realloc(var NewCapacity: {$IF Defined(USE_NATIVEINT)}NativeInt{$ELSE}Longint{$IFEND}): Pointer;
 var
-  L: Longint;
+  L: {$IF Defined(USE_NATIVEINT)}NativeInt{$ELSE}Longint{$IFEND};
 begin
   if NewCapacity <> Capacity then
   begin
