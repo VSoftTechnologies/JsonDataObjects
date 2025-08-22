@@ -1,11 +1,12 @@
 {
  "metadata": {
   "id": "VSoft.JsonDataObjects",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Json Parser for D2009 or later",
   "authors": "Andreas Hausladen",
   "projectUrl": "https://github.com/VSoftTechnologies/JsonDataObjects",
   "repositoryUrl": "https://github.com/VSoftTechnologies/JsonDataObjects",
+  "repositoryCommit": "#HASH#",
   "license": "MIT",
   "copyright": "Andreas Hausladen and contributors",
   "tags": "json parser",
@@ -13,62 +14,7 @@
  },
  "targetPlatforms": [
   {
-   "compiler": "12.0",
-   "platforms": "Win32, Win64",
-   "template": "12+"
-  },
-  {
-   "compiler": "11.0",
-   "platforms": "Win32, Win64",
-   "template": "default"
-  },
-  {
-   "compiler": "10.4",
-   "platforms": "Win32, Win64",
-   "template": "default"
-  },
-  {
-   "compiler": "10.3",
-   "platforms": "Win32, Win64",
-   "template": "default"
-  },
-  {
-   "compiler": "10.2",
-   "platforms": "Win32, Win64",
-   "template": "default"
-  },
-  {
-   "compiler": "10.1",
-   "platforms": "Win32, Win64",
-   "template": "default"
-  },
-  {
-   "compiler": "10.0",
-   "platforms": "Win32, Win64",
-   "template": "default"
-  },
-  {
-   "compiler": "XE8",
-   "platforms": "Win32, Win64",
-   "template": "default"
-  },
-  {
-   "compiler": "XE7",
-   "platforms": "Win32, Win64",
-   "template": "default"
-  },
-  {
-   "compiler": "XE6",
-   "platforms": "Win32, Win64",
-   "template": "default"
-  },
-  {
-   "compiler": "XE5",
-   "platforms": "Win32, Win64",
-   "template": "default"
-  },
-  {
-   "compiler": "XE4",
+   "compiler": "XE2",
    "platforms": "Win32, Win64",
    "template": "default"
   },
@@ -78,9 +24,64 @@
    "template": "default"
   },
   {
-   "compiler": "XE2",
+   "compiler": "XE4",
    "platforms": "Win32, Win64",
    "template": "default"
+  },
+  {
+   "compiler": "XE5",
+   "platforms": "Win32, Win64",
+   "template": "default"
+  },
+  {
+   "compiler": "XE6",
+   "platforms": "Win32, Win64",
+   "template": "default"
+  },
+  {
+   "compiler": "XE7",
+   "platforms": "Win32, Win64",
+   "template": "default"
+  },
+  {
+   "compiler": "XE8",
+   "platforms": "Win32, Win64",
+   "template": "default"
+  },
+  {
+   "compiler": "10.0",
+   "platforms": "Win32, Win64",
+   "template": "default"
+  },
+  {
+   "compiler": "10.1",
+   "platforms": "Win32, Win64",
+   "template": "default"
+  },
+  {
+   "compiler": "10.2",
+   "platforms": "Win32, Win64",
+   "template": "default"
+  },
+  {
+   "compiler": "10.3",
+   "platforms": "Win32, Win64",
+   "template": "default"
+  },
+  {
+   "compiler": "10.4",
+   "platforms": "Win32, Win64",
+   "template": "default"
+  },
+  {
+   "compiler": "11.0",
+   "platforms": "Win32, Win64",
+   "template": "default"
+  },
+  {
+   "compiler": "12.0",
+   "platforms": "Win32, Win64",
+   "template": "12+"
   },
   {
    "compiler": "13.0",
