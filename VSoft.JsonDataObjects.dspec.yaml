@@ -9,12 +9,12 @@ metadata:
   description: Json Parser
   projectUrl: https://github.com/VSoftTechnologies/JsonDataObjects
   repositoryUrl: https://github.com/VSoftTechnologies/JsonDataObjects
+  repositoryCommit: #HASH#
   license: MIT
   readme: readme.md
   copyright: Andreas Hausladen and contributors
   tags: [ json, parser ]
   version: 0.3.2
-  repositoryCommit: Id:e3cc88166b0bfe9339eb51425450147e24c49872
 
 # define variable defaults - can be overriden in targetPlatforms
 variables:
