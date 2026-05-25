@@ -26,19 +26,15 @@ targetPlatforms:
     compiler to: delphixe8
     platforms: [ win32, win64 ]
   - compiler from: delphi10.0
-    compiler to: delphi10.4
+    compiler to: delphi11.0
     platforms: [ win32, win64 ]
     variables:
       packageSource: "Rad Studio $compilernoprefix$ $compilerCodeName$"
-  - compilers: [ delphi11 ]
+  - compiler from: delphi12.0
+    compiler to: delphi13.0
     platforms: [ win32, win64 ]
     variables:
-      packageSource: "Rad Studio $compilernoprefix$.0 $compilerCodeName$"
-  - compiler from: delphi12
-    compiler to: delphi13
-    platforms: [ win32, win64 ]
-    variables:
-      packageSource: "Rad Studio $compilernoprefix$"
+      packageSource: "Rad Studio $compilermajornoprefix$"
 
 templates:
   - name: default
@@ -46,8 +42,6 @@ templates:
       - src: ./LICENSE
       - src: ./source/*.pas
       - src: ./packages/$packageSource$/*.dpk
-        dest: ./packages/$packageSource$
       - src: ./packages/$packageSource$/*.dproj
-        dest: ./packages/$packageSource$
     build:
       - project: ./packages/$packageSource$/VSoft.JsonDataObjectsR.dproj
